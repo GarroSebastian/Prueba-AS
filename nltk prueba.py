@@ -28,13 +28,9 @@ def preprocess_text(text):
     tokens = word_tokenize(text.lower())
 
 
-
-
     # Remove stop words
 
     filtered_tokens = [token for token in tokens if token not in stopwords.words('english')]
-
-
 
 
     # Lemmatize the tokens
@@ -42,8 +38,6 @@ def preprocess_text(text):
     lemmatizer = WordNetLemmatizer()
 
     lemmatized_tokens = [lemmatizer.lemmatize(token) for token in filtered_tokens]
-
-
 
 
     # Join the tokens back into a string
